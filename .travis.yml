@@ -1,0 +1,7 @@
+language: minimal
+
+services:
+  - docker
+
+install:
+  - docker-compose -f solution/udacity-c3-deployment/docker-compose-build.yaml build --paralel
