@@ -1,0 +1,8 @@
+version: '3'
+services:
+    node:
+        container_name: ulab-fe
+        build: .
+        image: tazio/ulab-c3-fe:v1
+        ports:
+            - "8100:80"
