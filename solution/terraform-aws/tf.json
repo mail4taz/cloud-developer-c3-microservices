@@ -1,0 +1,330 @@
+{
+  "kubeone_api": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "endpoint": "string"
+      }
+    ],
+    "value": {
+      "endpoint": "ulab-k8-api-lb-290480194.us-east-2.elb.amazonaws.com"
+    }
+  },
+  "kubeone_hosts": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "control_plane": [
+          "object",
+          {
+            "bastion": "string",
+            "bastion_port": "number",
+            "bastion_user": "string",
+            "cloud_provider": "string",
+            "cluster_name": "string",
+            "hostnames": [
+              "tuple",
+              [
+                "string",
+                "string",
+                "string"
+              ]
+            ],
+            "leader_ip": "string",
+            "private_address": [
+              "tuple",
+              [
+                "string",
+                "string",
+                "string"
+              ]
+            ],
+            "ssh_agent_socket": "string",
+            "ssh_port": "number",
+            "ssh_private_key_file": "string",
+            "ssh_user": "string"
+          }
+        ]
+      }
+    ],
+    "value": {
+      "control_plane": {
+        "bastion": "3.133.113.114",
+        "bastion_port": 22,
+        "bastion_user": "ubuntu",
+        "cloud_provider": "aws",
+        "cluster_name": "ulab-k8",
+        "hostnames": [
+          "ip-172-31-72-73.us-east-2.compute.internal",
+          "ip-172-31-73-104.us-east-2.compute.internal",
+          "ip-172-31-74-89.us-east-2.compute.internal"
+        ],
+        "leader_ip": "172.31.72.73",
+        "private_address": [
+          "172.31.72.73",
+          "172.31.73.104",
+          "172.31.74.89"
+        ],
+        "ssh_agent_socket": "env:SSH_AUTH_SOCK",
+        "ssh_port": 22,
+        "ssh_private_key_file": "",
+        "ssh_user": "ubuntu"
+      }
+    }
+  },
+  "kubeone_workers": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "ulab-k8-us-east-2a": [
+          "object",
+          {
+            "providerSpec": [
+              "object",
+              {
+                "cloudProviderSpec": [
+                  "object",
+                  {
+                    "ami": "string",
+                    "availabilityZone": "string",
+                    "diskIops": "number",
+                    "diskSize": "number",
+                    "diskType": "string",
+                    "instanceProfile": "string",
+                    "instanceType": "string",
+                    "region": "string",
+                    "securityGroupIDs": [
+                      "tuple",
+                      [
+                        "string"
+                      ]
+                    ],
+                    "subnetId": "string",
+                    "tags": [
+                      "object",
+                      {
+                        "ulab-k8-workers": "string"
+                      }
+                    ],
+                    "vpcId": "string"
+                  }
+                ],
+                "operatingSystem": "string",
+                "operatingSystemSpec": [
+                  "object",
+                  {
+                    "distUpgradeOnBoot": "bool"
+                  }
+                ],
+                "sshPublicKeys": [
+                  "tuple",
+                  [
+                    "string"
+                  ]
+                ]
+              }
+            ],
+            "replicas": "number"
+          }
+        ],
+        "ulab-k8-us-east-2b": [
+          "object",
+          {
+            "providerSpec": [
+              "object",
+              {
+                "cloudProviderSpec": [
+                  "object",
+                  {
+                    "ami": "string",
+                    "availabilityZone": "string",
+                    "diskIops": "number",
+                    "diskSize": "number",
+                    "diskType": "string",
+                    "instanceProfile": "string",
+                    "instanceType": "string",
+                    "region": "string",
+                    "securityGroupIDs": [
+                      "tuple",
+                      [
+                        "string"
+                      ]
+                    ],
+                    "subnetId": "string",
+                    "tags": [
+                      "object",
+                      {
+                        "ulab-k8-workers": "string"
+                      }
+                    ],
+                    "vpcId": "string"
+                  }
+                ],
+                "operatingSystem": "string",
+                "operatingSystemSpec": [
+                  "object",
+                  {
+                    "distUpgradeOnBoot": "bool"
+                  }
+                ],
+                "sshPublicKeys": [
+                  "tuple",
+                  [
+                    "string"
+                  ]
+                ]
+              }
+            ],
+            "replicas": "number"
+          }
+        ],
+        "ulab-k8-us-east-2c": [
+          "object",
+          {
+            "providerSpec": [
+              "object",
+              {
+                "cloudProviderSpec": [
+                  "object",
+                  {
+                    "ami": "string",
+                    "availabilityZone": "string",
+                    "diskIops": "number",
+                    "diskSize": "number",
+                    "diskType": "string",
+                    "instanceProfile": "string",
+                    "instanceType": "string",
+                    "region": "string",
+                    "securityGroupIDs": [
+                      "tuple",
+                      [
+                        "string"
+                      ]
+                    ],
+                    "subnetId": "string",
+                    "tags": [
+                      "object",
+                      {
+                        "ulab-k8-workers": "string"
+                      }
+                    ],
+                    "vpcId": "string"
+                  }
+                ],
+                "operatingSystem": "string",
+                "operatingSystemSpec": [
+                  "object",
+                  {
+                    "distUpgradeOnBoot": "bool"
+                  }
+                ],
+                "sshPublicKeys": [
+                  "tuple",
+                  [
+                    "string"
+                  ]
+                ]
+              }
+            ],
+            "replicas": "number"
+          }
+        ]
+      }
+    ],
+    "value": {
+      "ulab-k8-us-east-2a": {
+        "providerSpec": {
+          "cloudProviderSpec": {
+            "ami": "ami-004d3abe7e5109c79",
+            "availabilityZone": "us-east-2a",
+            "diskIops": 500,
+            "diskSize": 50,
+            "diskType": "gp2",
+            "instanceProfile": "ulab-k8-host",
+            "instanceType": "t3.medium",
+            "region": "us-east-2",
+            "securityGroupIDs": [
+              "sg-021a4883435576fdd"
+            ],
+            "subnetId": "subnet-021a046e771763592",
+            "tags": {
+              "ulab-k8-workers": ""
+            },
+            "vpcId": "vpc-b9bc72d2"
+          },
+          "operatingSystem": "ubuntu",
+          "operatingSystemSpec": {
+            "distUpgradeOnBoot": false
+          },
+          "sshPublicKeys": [
+            "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDDg+vgIkuXnJjUOCAgI0gJel676y4YxGfnHHd8aCqtxYGmdgbJBOtcs9ZV6me8O8PfWUxHlGz//rBHepDgbopxT5aHtkfIqbzouqnTvYAYYomAyqIQD1M9yPic19bC3rBRjKfJdPBnpSqaMJjPX5BfczQoxcG4t/sx9cEXBZhGwpTtwhWKHYJy/p/jP50htlfBsIC/AHzDUMasd7Xnti1X4rQZX4xxLaQ3fdxxe4rGw4OfobhJ/16ei1jI2CbHjh367SI73DtjrWpRxNJrO40kF0+h3IJ4Fq/QaAi1MNAQ/4UTPgg1KZZXuCPKeDQmte/ZaU5cgNAyioJlyi60qwv oianculescu@optaros.com"
+          ]
+        },
+        "replicas": 1
+      },
+      "ulab-k8-us-east-2b": {
+        "providerSpec": {
+          "cloudProviderSpec": {
+            "ami": "ami-004d3abe7e5109c79",
+            "availabilityZone": "us-east-2b",
+            "diskIops": 500,
+            "diskSize": 50,
+            "diskType": "gp2",
+            "instanceProfile": "ulab-k8-host",
+            "instanceType": "t3.medium",
+            "region": "us-east-2",
+            "securityGroupIDs": [
+              "sg-021a4883435576fdd"
+            ],
+            "subnetId": "subnet-0d5187de413fce533",
+            "tags": {
+              "ulab-k8-workers": ""
+            },
+            "vpcId": "vpc-b9bc72d2"
+          },
+          "operatingSystem": "ubuntu",
+          "operatingSystemSpec": {
+            "distUpgradeOnBoot": false
+          },
+          "sshPublicKeys": [
+            "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDDg+vgIkuXnJjUOCAgI0gJel676y4YxGfnHHd8aCqtxYGmdgbJBOtcs9ZV6me8O8PfWUxHlGz//rBHepDgbopxT5aHtkfIqbzouqnTvYAYYomAyqIQD1M9yPic19bC3rBRjKfJdPBnpSqaMJjPX5BfczQoxcG4t/sx9cEXBZhGwpTtwhWKHYJy/p/jP50htlfBsIC/AHzDUMasd7Xnti1X4rQZX4xxLaQ3fdxxe4rGw4OfobhJ/16ei1jI2CbHjh367SI73DtjrWpRxNJrO40kF0+h3IJ4Fq/QaAi1MNAQ/4UTPgg1KZZXuCPKeDQmte/ZaU5cgNAyioJlyi60qwv oianculescu@optaros.com"
+          ]
+        },
+        "replicas": 1
+      },
+      "ulab-k8-us-east-2c": {
+        "providerSpec": {
+          "cloudProviderSpec": {
+            "ami": "ami-004d3abe7e5109c79",
+            "availabilityZone": "us-east-2c",
+            "diskIops": 500,
+            "diskSize": 50,
+            "diskType": "gp2",
+            "instanceProfile": "ulab-k8-host",
+            "instanceType": "t3.medium",
+            "region": "us-east-2",
+            "securityGroupIDs": [
+              "sg-021a4883435576fdd"
+            ],
+            "subnetId": "subnet-0e161515804237a82",
+            "tags": {
+              "ulab-k8-workers": ""
+            },
+            "vpcId": "vpc-b9bc72d2"
+          },
+          "operatingSystem": "ubuntu",
+          "operatingSystemSpec": {
+            "distUpgradeOnBoot": false
+          },
+          "sshPublicKeys": [
+            "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDDg+vgIkuXnJjUOCAgI0gJel676y4YxGfnHHd8aCqtxYGmdgbJBOtcs9ZV6me8O8PfWUxHlGz//rBHepDgbopxT5aHtkfIqbzouqnTvYAYYomAyqIQD1M9yPic19bC3rBRjKfJdPBnpSqaMJjPX5BfczQoxcG4t/sx9cEXBZhGwpTtwhWKHYJy/p/jP50htlfBsIC/AHzDUMasd7Xnti1X4rQZX4xxLaQ3fdxxe4rGw4OfobhJ/16ei1jI2CbHjh367SI73DtjrWpRxNJrO40kF0+h3IJ4Fq/QaAi1MNAQ/4UTPgg1KZZXuCPKeDQmte/ZaU5cgNAyioJlyi60qwv oianculescu@optaros.com"
+          ]
+        },
+        "replicas": 1
+      }
+    }
+  }
+}

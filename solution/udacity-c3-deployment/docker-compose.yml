@@ -1,0 +1,34 @@
+version: "3"
+services:
+ reverseproxy:
+   container_name: ulab-rproxy
+   image: tazio/ulab-c3-rproxy:v1
+   ports:
+     - 8080:8080
+   restart: always
+   depends_on:
+    - backend-user
+    - backend-feed   
+ backend-user:
+  container_name: ulab-user
+  image: tazio/ulab-c3-user:v1
+  env_file:
+    - ../udacity-c3-restapi-user/env-vars.env
+  expose: 
+    - "8082"
+  volumes:
+    - /home/tavi/.aws:/root/.aws
+ backend-feed:
+  container_name: ulab-feed
+  image: tazio/ulab-c3-feed:v1
+  env_file:
+    - ../udacity-c3-restapi-feed/env-vars.env
+  expose: 
+    - "8082"
+  volumes:
+    - /home/tavi/.aws:/root/.aws
+ frontend:
+  container_name: ulab-fe
+  image: tazio/ulab-c3-fe:v1
+  ports:
+    - "8100:80"

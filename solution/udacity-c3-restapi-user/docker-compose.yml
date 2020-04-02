@@ -1,0 +1,12 @@
+version: '3'
+services:
+    node:
+        container_name: ulab-user
+        build: .
+        image: tazio/ulab-c3-user:v1
+        env_file:
+            - env-vars.env
+        ports:
+            - "8082:8082"
+        volumes: 
+            - /home/tavi/.aws:/root/.aws
